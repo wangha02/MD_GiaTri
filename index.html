@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1 id="songuyen"></h1>
+<button>GT1</button>
+<input id="giatri1"><br>
+
+<button>GT2</button>
+<input id="giatri2"><br>
+
+<button>GT3</button>
+<input id="giatri3">
+
+<h1 id="ketqua"></h1>
+<button onclick="giatri()">Ketqua</button>
+<script>
+    function giatri() {
+        let number1 = +document.getElementById("giatri1").value;
+        let number2 = +document.getElementById("giatri2").value;
+        let number3 = +document.getElementById("giatri3").value;
+        if (number1 > number2){
+            if (number1 > number3){
+                document.getElementById("ketqua").innerText = "so" + number1 + "la so lon nhat";
+            }else {
+                document.getElementById("ketqua").innerText = "so" + number3 + "la so lon nhat";
+                // number2 < number1 && number1 < number3
+            }
+        }else {
+            if (number2 > number3){
+                document.getElementById("ketqua").innerText = "so" + number2 + "la so lon nhat";
+                // number 1 < number 2 && number 2 > number 3
+            }else {
+                document.getElementById("ketqua").innerText = "so" + number3 + "so la so lon nhat";
+                // number1 < number 2 && number2 < number 3
+
+            }
+        }
+    }
+</script>
+
+
+</body>
+</html>
